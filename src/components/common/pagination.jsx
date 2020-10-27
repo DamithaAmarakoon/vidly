@@ -10,7 +10,7 @@ const Pagination = ({ itemsCount, pageSize, onPageChange, currentPage }) => {
 	const pages = _.range(1, pageCount + 1);
 
 	return (
-		<nav className='fixed-bottom mb-5'>
+		<nav className='mb-5'>
 			<ul className='pagination justify-content-center'>
 				{pages.map(page => (
 					<li

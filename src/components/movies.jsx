@@ -89,7 +89,7 @@ class Movies extends Component {
 
 		return (
 			<React.Fragment>
-				<div className='row'>
+				<div className='row' style={{ minHeight: 400 }}>
 					<div className='col-3'>
 						<ListGroup
 							items={this.state.genres}
@@ -118,16 +118,16 @@ class Movies extends Component {
 									onDelete={this.handleDelete}
 									onSort={this.handleSort}
 								/>
-								<Pagination
-									itemsCount={filteredCount}
-									pageSize={pageSize}
-									currentPage={currentPage}
-									onPageChange={this.handlePageChange}
-								/>
 							</React.Fragment>
 						)}
 					</div>
 				</div>
+				<Pagination
+					itemsCount={filteredCount}
+					pageSize={pageSize}
+					currentPage={currentPage}
+					onPageChange={this.handlePageChange}
+				/>
 			</React.Fragment>
 		);
 	}
